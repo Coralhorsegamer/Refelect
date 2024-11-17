@@ -1,0 +1,88 @@
+/**
+ * @name CutePrisVision
+ * @description A cute semi transparent theme for vencord with pastel aesthetics, a cuter font and aesthetic elements!
+ * @version 1.0.3
+ * @author Umpu (Coral)
+ */
+
+/* General Theme Variables */
+:root {
+  /* Pastel Accent Colors */
+  --main-color: #ffc0cb; /* Soft Pink */
+  --hover-color: #ff9a9e; /* Light Salmon */
+  --success-color: #b4f8b4; /* Light Mint Green */
+  --danger-color: #ff8e72; /* Coral Orange */
+  --url-color: var(--main-color);
+
+  /* Softer Dark Background */
+  --background-image: url(https://i.imgur.com/Q7A0M5y.jpeg); /* Background image */
+  --background-position: center;
+  --background-size: cover;
+  --background-overlay: rgba(0, 0, 0, 0.5); /* Softer overlay for balanced darkness */
+  --background-blur: 4px; /* Subtle blur for smoothness */
+  --background-brightness: 85%; /* Slightly dimmed for a soft dark aesthetic */
+  --background-saturation: 95%; /* Keep colors pastel and not overly muted */
+
+  /* Fonts */
+  --main-font: 'Comic Sans MS', Helvetica, Arial, sans-serif; /* Playful font */
+  --text-normal: rgb(220, 221, 222); /* Softer and brighter text color */
+  --text-link: #ffaccb; /* Light pastel pink links */
+
+  /* Buttons and Elements */
+  --button-bg: #ffddcc; /* Soft Peach */
+  --button-hover-bg: #ffc7c7; /* Light Misty Rose */
+  --button-border-radius: 10px; /* Rounded buttons */
+}
+
+/* Background Styling */
+.appMount_fae9dd {
+  background: linear-gradient(var(--background-overlay), var(--background-overlay)),
+              var(--background-image) center/cover no-repeat;
+  filter: blur(var(--background-blur)) brightness(var(--background-brightness));
+}
+
+/* Home Icon */
+.wrapper_d281dd[data-list-item-id="guildsnav___home"] path {
+  display: none !important;
+}
+.wrapper_d281dd[data-list-item-id="guildsnav___home"]::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url(https://i.imgur.com/9P3sg72.png) center/cover no-repeat; /* Cute heart icon */
+}
+
+/* Buttons and Inputs */
+button, .button {
+  background: var(--button-bg);
+  border-radius: var(--button-border-radius);
+  transition: all 0.3s ease-in-out;
+}
+button:hover, .button:hover {
+  background: var(--button-hover-bg);
+}
+
+/* Animations */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px var(--main-color); }
+  50% { box-shadow: 0 0 15px var(--main-color); }
+  100% { box-shadow: 0 0 5px var(--main-color); }
+}
+button:hover {
+  animation: glow 1s infinite;
+}
+
+/* Scroller */
+.scroller-1bVxF5 {
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+
+/* Tooltip and Popups */
+.tooltip {
+  background: var(--main-color);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
